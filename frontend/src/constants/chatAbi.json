@@ -1,0 +1,151 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      { "name": "_ens", "type": "address", "internalType": "address" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "allMessages",
+    "inputs": [
+      { "name": "", "type": "address", "internalType": "address" },
+      { "name": "", "type": "address", "internalType": "address" },
+      { "name": "", "type": "uint256", "internalType": "uint256" }
+    ],
+    "outputs": [
+      { "name": "sender", "type": "address", "internalType": "address" },
+      { "name": "receiver", "type": "address", "internalType": "address" },
+      { "name": "content", "type": "string", "internalType": "string" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "ens",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address", "internalType": "contract IENS" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "ensAddress",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAllMsg",
+    "inputs": [{ "name": "to", "type": "address", "internalType": "address" }],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getMessages",
+    "inputs": [
+      { "name": "_sender", "type": "string", "internalType": "string" },
+      { "name": "_receiver", "type": "string", "internalType": "string" }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct LibChat.Message[]",
+        "components": [
+          { "name": "sender", "type": "address", "internalType": "address" },
+          {
+            "name": "receiver",
+            "type": "address",
+            "internalType": "address"
+          },
+          { "name": "content", "type": "string", "internalType": "string" }
+        ]
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "messages",
+    "inputs": [
+      { "name": "", "type": "address", "internalType": "address" },
+      { "name": "", "type": "address", "internalType": "address" }
+    ],
+    "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "sendMessage",
+    "inputs": [
+      { "name": "_receiver", "type": "string", "internalType": "string" },
+      { "name": "_userMessage", "type": "string", "internalType": "string" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "messageSentEvent",
+    "inputs": [
+      {
+        "name": "from",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "to",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "messagesFetchedEvent",
+    "inputs": [
+      {
+        "name": "from",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "to",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "messages",
+        "type": "tuple[]",
+        "indexed": false,
+        "internalType": "struct LibChat.Message[]",
+        "components": [
+          { "name": "sender", "type": "address", "internalType": "address" },
+          {
+            "name": "receiver",
+            "type": "address",
+            "internalType": "address"
+          },
+          { "name": "content", "type": "string", "internalType": "string" }
+        ]
+      }
+    ],
+    "anonymous": false
+  }
+]

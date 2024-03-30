@@ -1,0 +1,93 @@
+[
+  {
+    "type": "function",
+    "name": "ensRecords",
+    "inputs": [{ "name": "", "type": "string", "internalType": "string" }],
+    "outputs": [
+      { "name": "owner", "type": "address", "internalType": "address" },
+      { "name": "ensName", "type": "string", "internalType": "string" },
+      { "name": "ensUri", "type": "string", "internalType": "string" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getENSRecord",
+    "inputs": [
+      { "name": "_ensName", "type": "string", "internalType": "string" }
+    ],
+    "outputs": [
+      { "name": "", "type": "address", "internalType": "address" },
+      { "name": "", "type": "string", "internalType": "string" },
+      { "name": "", "type": "string", "internalType": "string" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "setENSRecord",
+    "inputs": [
+      { "name": "_ensName", "type": "string", "internalType": "string" },
+      { "name": "_ensUri", "type": "string", "internalType": "string" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updateENSRecord",
+    "inputs": [
+      { "name": "_ensName", "type": "string", "internalType": "string" },
+      { "name": "_ensUri", "type": "string", "internalType": "string" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "EnsRegistrationn",
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "ensName",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UriUpdate",
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "ensName",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "ensUri",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      }
+    ],
+    "anonymous": false
+  },
+  { "type": "error", "name": "EnsRecordDoesNotExist", "inputs": [] },
+  { "type": "error", "name": "EnsRecordExists", "inputs": [] },
+  { "type": "error", "name": "NotEnsOwner", "inputs": [] }
+]
