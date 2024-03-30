@@ -2,11 +2,11 @@
 
 fork-sepolia:
 	@echo "Building broker binary..."
-	@anvil --fork-url ${SEPOLIA_RPC_URL}
+	@anvil --fork-url ${ALCHEMY_SEPOLIA_API_KEY_URL}
 
 deploy-sepolia:
 	@echo "Deploying to sepolia..."
-	@forge script ./script/Deploy.s.sol --rpc-url ${SEPOLIA_RPC_URL}  --broadcast --private-key ${PRIVATE_KEY} --etherscan-api-key ${ETHERSCAN_API_KEY} --verify -vvvvv
+	@forge script ./script/Deploy.s.sol --rpc-url ${ALCHEMY_SEPOLIA_API_KEY_URL}  --broadcast --private-key ${ACCOUNT_PRIVATE_KEY} --etherscan-api-key ${ETHERSCAN_API_KEY} --verify -vvvvv
 
 fork-local:
 	@echo "Building broker binary..."
